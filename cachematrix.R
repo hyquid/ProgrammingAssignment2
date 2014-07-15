@@ -22,7 +22,14 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## cacheSolve function expects a makeCacheMatrix instance as its argument.
+## cacheSolve function first check whether the inverse matrix has been solved
+## and stored in the makeCacheMatrix instance.
+## If yes, it will directly retrieve the cached inverse matrix. 
+## If the inverse matrix is not solved (a.k.a. null),
+## this function will get the matrix as set using makecacheMatrix function from
+## the makeCacheMatrix instance and solve the inverse matrix, store it
+## back in the makeCachMatrix instance and print it out on the console.
 
 cacheSolve <- function(x, ...) {
         inv <- x$getinverse()
